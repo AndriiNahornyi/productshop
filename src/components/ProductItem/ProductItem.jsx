@@ -1,8 +1,22 @@
-export const ProductItem = ({ onClick, name, id, price }) => {
+// import css from './ProductItem.module.css';
+import { FiBriefcase } from 'react-icons/fi';
+export const ProductItem = ({
+  onClick,
+  name,
+  id,
+  price,
+  getIconColor,
+  deleteProduct,
+}) => {
+  // console.log('onClick', iconColor);
   return (
-    <li onClick={onClick} key={id} data-id={id}>
+    <li onClick={onClick} data-id={id}>
       <span>name: {name}</span>
       <span>price: {price}</span>
+      <FiBriefcase
+        style={{ color: `${getIconColor()}` }}
+        onClick={() => deleteProduct(id)}
+      />
     </li>
   );
 };
