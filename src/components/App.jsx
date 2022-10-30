@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { getProducts, getProductById, deleteProductById } from '../helpers/api';
-import { ProductItem } from './ProductItem';
 import './App.css';
 import { ProductGallery } from './ProductGallery/ProductGallery';
 import { ItemInform } from './ItemInform/ItemInform';
