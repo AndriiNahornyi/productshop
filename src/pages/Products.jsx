@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ItemInform } from '../components/ItemInform/ItemInform';
-import { deleteProductById, getProductById, getProducts } from '../helpers/api';
+
+import { deleteProductById, getProducts } from '../helpers/api';
 import { ProductGallery } from '../components/ProductGallery/ProductGallery';
 
 export default function Products() {

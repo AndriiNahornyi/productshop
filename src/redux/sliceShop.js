@@ -9,8 +9,11 @@ const shopSlice = createSlice({
     addProduct: (state, action) => {
       state.basket = [...state.basket, action.payload];
     },
+    removeProduct: (state, action) => {
+      state.basket = state.basket.filter(item => item.id !== action.payload);
+    },
   },
 });
 
-export const { addProduct } = shopSlice.actions;
+export const { addProduct, removeProduct } = shopSlice.actions;
 export const shopReducer = shopSlice.reducer;
