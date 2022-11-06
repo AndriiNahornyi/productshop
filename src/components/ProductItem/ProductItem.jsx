@@ -1,4 +1,4 @@
-// import css from './ProductItem.module.css';
+import css from './ProductItem.module.css';
 import { FiBriefcase } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 import { addProduct } from '../../redux/sliceShop';
@@ -24,16 +24,27 @@ export const ProductItem = ({
   };
   const disableBtn = id => basketProducts.some(product => product.id === id);
   return (
-    <li onClick={onClick} data-id={id}>
-      <span>name: {name}</span>
-      <span>price: {price}</span>
-      <FiBriefcase
-        style={{ color: `${getIconColor()}` }}
-        onClick={() => deleteProduct(id)}
-      />
-      <button onClick={buyProduct} type="button" disabled={disableBtn(id)}>
-        Add to basket
-      </button>
-    </li>
+    <div className={css.Container}>
+      <li className={css.Item} onClick={onClick} data-id={id}>
+        <div className={css.Content}>
+          <span className={css.Paragraph}>name: </span>
+          {name}, <span className={css.Paragraph}>price: </span>
+          {price}
+          <FiBriefcase
+            className={css.Icon}
+            style={{ color: `${getIconColor()}` }}
+            onClick={() => deleteProduct(id)}
+          />
+        </div>
+        <button
+          onClick={buyProduct}
+          type="button"
+          disabled={disableBtn(id)}
+          className={css.Hover}
+        >
+          Add to basket
+        </button>
+      </li>
+    </div>
   );
 };

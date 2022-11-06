@@ -23,7 +23,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.NavLink {
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: none;
+  color: tomato;
+}
+.Link {
+  display: flex;
+  margin-left: 10px;
+}
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +44,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+.Section {
+  padding: 20px;
+}
+.Title {
+  font-weight: 900;
+  font-size: 32px;
+  color: tomato;
+}
+.Content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
